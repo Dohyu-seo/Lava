@@ -1,7 +1,4 @@
 package day13;
-/*
- 	
- */
 
 import java.util.*;
 
@@ -40,21 +37,21 @@ public class Exec01 {
 			list2.add(new int[]{15});
 			
 			for(int i = 0; i<list.size(); i++) {
-				// Collection 에서는 length 대신 size()를 사용해서 길이를 가져온다.
+					// Collection 에서는 length 대신 size()를 사용해서 길이를 가져온다.
 				Test01 t =(Test01)list.get(i);
 //				(Test01)List.get(i); 
-				//Collection은 데이터에 담길 때 Object 타입으로 자동 형변환이 일어난다.
-				// 꺼낼 때도 맞는 타입으로 형변환을 시켜주어야 한다.
-				// 이렇게 매번 형 변환을 시켜주게 된다면 번거롭다. 그렇게 제너릭스라는 게 생겨났다. - 제너릭스는 나중에..
-				t.calcArea((int[])list2.get(i));
-				//calcArea의 list2.get(i)를 꺼내면 Object 타입, int[] 배열로 강제 형변환을 해서 꺼내게 된다.
-				// 강제로 하는 이유 : Object라는 타입은 넓고 그 하위클래스는 좁은 타입이다. 넓은타입에서 좁은타입으로 변경할 때는 강제형변환을 써야하기 때문에...
-				
-				System.out.println(t.calcArea((int[])list2.get(i)));
+					//Collection은 데이터에 담길 때 Object 타입으로 자동 형변환이 일어난다.
+					// 꺼낼 때도 맞는 타입으로 형변환을 시켜주어야 한다.
+					// 이렇게 매번 형 변환을 시켜주게 된다면 번거롭다. 그렇게 제네릭스라는 게 생겨났다. - 제네릭스는 나중에..
+//				t.calcArea((int[])list2.get(i));
+					//calcArea의 list2.get(i)를 꺼내면 Object 타입, int[] 배열로 강제 형변환을 해서 꺼내게 된다.
+					// 강제로 하는 이유 : Object라는 타입은 넓고 그 하위클래스는 좁은 타입이다. 넓은타입에서 좁은타입으로 변경할 때는 강제형변환을 써야하기 때문에...
+				int[] arr = (int[])list2.get(i);
+//				System.out.println(t.calcArea((int[])list2.get(i)));
+				System.out.println(t.calcArea(arr));
 			}
 			System.out.println("-------------------------------------");
 			abc();
-			
 	}
 	
 	//부연 설명
@@ -72,12 +69,12 @@ public class Exec01 {
 		list2.add(new int[]{10, 5});
 		list2.add(new int[]{5, 20});
 		list2.add(new int[]{15});
-		
+		/*
 		//면적 출력하기
 		System.out.println(t.calcArea((int[])list2.get(0)));
 		System.out.println(t2.calcArea((int[])list2.get(1)));
 		System.out.println(t3.calcArea((int[])list2.get(2)));
-		
+		*/
 		ArrayList list = new ArrayList();
 		list.add(t);
 		list.add(t2);
@@ -93,6 +90,11 @@ public class Exec01 {
 		Class02 c2 = (Class02)list.get(1);
 		Class03 c3 = (Class03)list.get(2);
 		
+		// ==> Test01타입의 변수에 기억해도 될 것이다.
+		Test01 tt1 = (Class01)list.get(0);
+		Test01 tt2 = (Class02)list.get(1);
+		Test01 tt3 = (Class03)list.get(2);
+		
 		// 그런데 이것을 반복문 처럼 반복해서 사용해야 되는 경우라면
 		// 위의 방식은 적합하지 않다.
 		// 따라서 반복문으로 처리를 하려면 공통타입으로 꺼낸 데이터를 강제 형변환 시켜야 될 것이다.
@@ -101,12 +103,6 @@ public class Exec01 {
 
 		// 2. 우리가 처리해준 함수를 쓰려면 그 함수를 갖고있는 최상위 클래스로 강제 형변환을 실행시켜주면 될 것이다.
 		// 3. Test01은 Class의 최상위 타입이면서 함수까지 갖고있다.(그 함수까지 쓸 수 있는 클래스이다.)
-		
-		
-		
-		
-		
-		
 	}
 	public static void main(String[] args) {
 		new Exec01();

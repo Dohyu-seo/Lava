@@ -36,7 +36,7 @@ public class Ex01 {
 	//배열에 점수넣기
 	public void setRandom() {
 		toPrint();
-	
+	 
 		for(int i=0; i<score.length; i++) {
 			double sum = 0;
 			for(int j=0; j<score[i].length; j++) {

@@ -25,7 +25,7 @@ public class Ex01 {
 					// 기본값 
 					won[i] = new Circle();
 				}
-			}
+			} 
 			//5
 			// 원 출력하기.
 			for(int i = 0 ; i < won. length; i ++) {

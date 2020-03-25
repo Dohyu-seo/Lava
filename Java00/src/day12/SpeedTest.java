@@ -14,7 +14,7 @@ public class SpeedTest {
 		Car car = new Car();
 		car.speedUp();
 		System.out.println("Car speed : " + car.speed);
-		
+		 
 		Mini mini = new Mini();
 		mini.speedUp();
 		System.out.println("Mini speed : "+ mini.speed+"m/h");
