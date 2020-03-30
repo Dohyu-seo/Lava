@@ -53,6 +53,9 @@ Object 클래스
 
 String 클래스와 StringBuffer 클래스의 차이점
 	
+	
+	*** StrubgBuffer 의 append는 맨 뒤에 공백을 두어야 사용할 때 에러가 나지 않는다.
+	
 	 String 클래스는 문자열을 변경하게 되면
 	매번 Heap 영역에 객체를 생성하게 되므로
 	메모리 낭비가 극심해진다.
@@ -347,7 +350,7 @@ StringTokenizer < 사용빈도가 있다. 임시 버퍼에 담는다는 것. (중요)
 			countTokens()
 				==> 문자열을 나눈 결과 수를 반환해주는 함수 
 			
-			hasMoreElements() / hasMoreTokens()
+			hasMoreElements() / hasMoreTokens() // Object 타입 / String 타입.
 				==> 임시버퍼에 내용이 남아있는지 여부를 묻는 함수 // 결과값은 true | false
 			
 			nextElement() / nextToken()        // Element < Object 타입 , Token < String 타입.
