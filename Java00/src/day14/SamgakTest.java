@@ -5,8 +5,8 @@ import javax.swing.JOptionPane;
 public class SamgakTest {
 	Samgak s1, s2;
 	public SamgakTest() throws NumberFormatException {
-
-		// JOptionpane로 입력받기~
+		//ArrayList
+		// JOptionpane로 입력받기	for문으로 사용..
 		String s1num = JOptionPane.showInputDialog("첫 번째 삼각형의 밑변을 입력하세요.");
 		String s1num2 = JOptionPane.showInputDialog("첫 번째 삼각형의 높이를 입력하세요.");
 		String s2num = JOptionPane.showInputDialog("두 번째 삼각형의  밑변을 입력하세요.");
