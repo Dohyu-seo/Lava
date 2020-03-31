@@ -116,9 +116,11 @@ List 계열
 			Vector의 특징을 그대로 가지고 있다.
 			
 			다만,
-			스레드에서 동기화 처리를 자동으로 해줌으로
+			스레드에서 동기화 처리를 자동으로 해주지 않습니다.
+			그러다보니 데이터 처리속도가 Vector보다 빠르다.
+			
 			요사이는 Vector보다는 ArrayList 사용을 선호하는 경향이 있다.
-		
+			
 		사용방법 ]
 			Vector와 유사하다.
 			
@@ -129,6 +131,12 @@ List 계열
 				
 				절대로 사용할 때는 toString()을 생각하지 말자.
 				이것도 역시 내용만 살펴보는 함수이다.
+			
+			
+	-- 동기화 처리를 따로 해주는 함수가 존재한다.
+			synchronizedList(List list) 	==> list를 동기화된 list로 반환
+			synchronizedMap( Map m ) 		==> Map을 동기화 처리된 Map으로 반환
+			synchronizedSet( Set s )		==> Set을 동기화 처리된 Set으로 반환
 				
 		
 		3. LinkedList

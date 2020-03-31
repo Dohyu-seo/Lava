@@ -2,19 +2,51 @@
 	Calendar 클래스의
 		
 		1. set()
+			- set(int field, int value)
+					주어진 일정 필드를 주어진 값으로 설정합니다.
+			- set(int year, int month, int date)
+					달력 필드 YEAR, MONTH 및 DAY_OF_MONTH의 값을 설정합니다.
+			- set(int year, int month, int date, int hourOfDay, int minute)
+					달력 필드 YEAR, MONTH, DAY_OF_MONTH, HOUR_OF_DAY 및 MINUTE의 값을 설정합니다.
+			- set(int year, int month, int date, int hourOfDay, int minute, int second)
+					YEAR, MONTH, DAY_OF_MONTH, HOUR_OF_DAY, MINUTE 및 SECOND 필드 값을 설정합니다.
+					
 		2. getTimeInMillis()
+			이 달력의 시간 값을 밀리 초 단위로 반환합니다.
+			
 		3. getActualMaximum()
+			(int field) 이 달력의 시간 값이 주어지면 지정된 달력 필드가 가질 수있는 최대 값을 반환합니다.
+			
 		4. add()
+			add(int field, int amount)
+				캘린더 규칙에 따라 지정된 캘린더 필드에 지정된 시간을 더하거나 뺍니다.
+				
 		5. roll()
+			-	roll(int field, boolean up)
+					더 큰 필드를 변경하지 않고 주어진 시간 필드에서 단일 시간 단위를 더하거나 뺍니다 (위 / 아래).
+			-	roll(int field, int amount)
+					큰 필드를 변경하지 않고 지정된 달력 필드에 지정된 (부호) 양을 추가한다.
+					
 		6. after()
+			- after(Object when)
+				이 달력이 지정된 객체가 나타내는 시간 이후의 시간을 나타내는 지 여부를 반환합니다.
+				
 		7. before()
+			- before(Object when)
+				이 달력이 지정된 객체가 나타내는 시간 이전의 시간을 나타내는 지 여부를 반환합니다.
+		
 	를 의미와 사용법을 공부하세요.
 	
 숙제 ] 
+	java.lang.
 	
 	String, StringBuffer, StringBuilder 소속의 함수 10 이상 조사하고 예제를 만들어 보세요.
 	
+	
+	
 숙제 2]
+	java.util.ArrayList<E>
+	
 	
 	Vector, ArrayList의 함수들의 10개정도 의미와 사용법을 공부해보세요....!
 	
