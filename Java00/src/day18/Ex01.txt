@@ -1,0 +1,8 @@
+# Edit Complete
+#Wed Apr 01 12:21:48 KST 2020
+total=445
+code=90
+math=80
+eng=95
+kor=85
+physic=95
